@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ToDoList from './ToDoList';
+import ECommerce from './ECommerce';
+import Homepage from './app/main/homepage/page';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ToDoList />
+    <Homepage/>
   </React.StrictMode>
 );
 
