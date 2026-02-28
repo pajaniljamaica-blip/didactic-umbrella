@@ -122,7 +122,6 @@ function Homepage() {
   );
 }
 
-export default Homepage;
 
 
 const headerStyle = {

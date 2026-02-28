@@ -114,4 +114,3 @@ const styles = {
   }
 };
 
-export default CardList;
