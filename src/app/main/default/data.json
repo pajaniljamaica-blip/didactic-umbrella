@@ -1,0 +1,299 @@
+[
+    {
+        "id": 1,
+        "name": "Hammer",
+        "price": 150,
+        "category": "Tools"
+    },
+    {
+        "id": 2,
+        "name": "Grass Cutter",
+        "price": 250,
+        "category": "Tools"
+    },
+    {
+        "id": 3,
+        "name": "Shovel",
+        "price": 185,
+        "category": "Tools"
+    },
+    {
+        "id": 4,
+        "name": "Wheel Barrow",
+        "price": 450,
+        "category": "Tools"
+    },
+    {
+        "id": 5,
+        "name": "Handsaw",
+        "price": 120,
+        "category": "Tools"
+    },
+    {
+        "id": 6,
+        "name": "Trovel",
+        "price": 145,
+        "category": "Tools"
+    },
+    {
+        "id": 7,
+        "name": "Chisel",
+        "price": 95,
+        "category": "Tools"
+    },
+    {
+        "id": 8,
+        "name": "Paint Roller",
+        "price": 130,
+        "category": "Tools"
+    },
+    {
+        "id": 9,
+        "name": "Tape Measure",
+        "price": 95,
+        "category": "Tools"
+    },
+    {
+        "id": 10,
+        "name": "Safety Glasses",
+        "price": 250,
+        "category": "Tools"
+    },
+     {
+        "id": 11, 
+        "name": "Screwdriver Set", 
+        "price": 220, 
+        "category": "Tools" 
+    },
+    { 
+        "id": 12, 
+        "name": "Adjustable Wrench", 
+        "price": 180, 
+        "category": "Tools" 
+    },
+    {   "id": 13, 
+        "name": "Pliers", 
+        "price": 110, 
+        "category": "Tools" 
+    },
+    {   "id": 14, 
+        "name": "Electric Drill", 
+        "price": 1200, 
+        "category": "Power Tools" 
+    },
+    { 
+        "id": 15, 
+        "name": "Circular Saw", 
+        "price": 1500, 
+        "category": "Power Tools" 
+    },
+    { 
+        "id": 16, 
+        "name": "Angle Grinder", 
+        "price": 980, "category": 
+        "Power Tools" 
+    },
+    { 
+        "id": 17, 
+        "name": "Ladder", 
+        "price": 850, 
+        "category": "Equipment" 
+    },
+    { 
+        "id": 18, 
+        "name": "Toolbox", 
+        "price": 400, 
+        "category": "Storage" 
+    },
+    { 
+        "id": 19, 
+        "name": "Workbench", 
+        "price": 2200, 
+        "category": "Furniture" 
+    },
+    { 
+        "id": 20, 
+        "name": "Utility Knife", 
+        "price": 90, 
+        "category": "Tools" 
+    },
+    {   
+        "id": 21, 
+        "name": "Bolt Cutter", 
+        "price": 300, 
+        "category": "Tools" 
+    },
+    { 
+        "id": 22, 
+        "name": "Pipe Wrench", 
+        "price": 275, 
+        "category": "Tools" 
+    },
+    { 
+        "id": 23, 
+        "name": "Level Bar", 
+        "price": 160, 
+        "category": "Tools" 
+    },
+    { 
+        "id": 24, 
+        "name": "Stud Finder", 
+        "price": 210, 
+        "category": "Tools" 
+    },
+    { 
+        "id": 25, 
+        "name": "Flashlight", 
+        "price": 140,
+        "category": "Equipment" 
+    },
+    { 
+        "id": 26, 
+        "name": "Extension Cord", 
+        "price": 190, 
+        "category": "Electrical" 
+    },
+    { 
+        "id": 27, 
+        "name": "Wire Stripper", 
+        "price": 125, 
+        "category": "Electrical" 
+    },
+    { 
+        "id": 28, 
+        "name": "Soldering Iron", 
+        "price": 350, 
+        "category": "Electrical" 
+    },
+    { 
+        "id": 29, 
+        "name": "Air Compressor", 
+        "price": 3200, 
+        "category": "Equipment" 
+    },
+    { 
+        "id": 30, 
+        "name": "Paint Brush Set", 
+        "price": 180, 
+        "category": "Painting" 
+    },
+    { 
+        "id": 31, 
+        "name": "Pressure Washer", 
+        "price": 2800, 
+        "category": "Equipment" 
+    },
+    { 
+        "id": 32, 
+        "name": "Chainsaw", 
+        "price": 3400, 
+        "category": "Power Tools" 
+    },
+    { 
+        "id": 33, 
+        "name": "Leaf Blower", 
+        "price": 1500, 
+        "category": "Garden" 
+    },
+    { 
+        "id": 34, 
+        "name": "Garden Hose", 
+        "price": 260, 
+        "category": "Garden" 
+    },
+    { 
+        "id": 35, 
+        "name": "Sprinkler", 
+        "price": 175, 
+        "category": "Garden" 
+    },
+    { 
+        "id": 36, 
+        "name": "Rake", 
+        "price": 135, 
+        "category": "Garden" 
+    },
+    { 
+        "id": 37, 
+        "name": "Pruning Shears", 
+        "price": 145, 
+        "category": "Garden" 
+    },
+    { 
+        "id": 38, 
+        "name": "Measuring Wheel", 
+        "price": 670, 
+        "category": "Tools" 
+    },
+    { 
+        "id": 39, 
+        "name": "Caulking Gun", 
+        "price": 115, 
+        "category": "Tools" 
+    },
+    { 
+        "id": 40, 
+        "name": "Clamp Set", 
+        "price": 240, 
+        "category": "Tools" 
+    },
+    { 
+        "id": 41, 
+        "name": "Workbench Light", 
+        "price": 320, 
+        "category": "Lighting" 
+    },
+    { 
+        "id": 42, 
+        "name": "Dust Mask", 
+        "price": 60, 
+        "category": "Safety" 
+    },
+    { 
+        "id": 43, 
+        "name": "Hard Hat", 
+        "price": 210, 
+        "category": "Safety" 
+    },
+    { 
+        "id": 44, 
+        "name": "Steel Toe Boots", 
+        "price": 1800, 
+        "category": "Safety" 
+    },
+    { 
+        "id": 45, 
+        "name": "Work Gloves", 
+        "price": 85, 
+        "category": "Safety" 
+    },
+    { 
+        "id": 46, 
+        "name": "Tool Belt", 
+        "price": 260, 
+        "category": "Accessories" 
+    },
+    { 
+        "id": 47, 
+        "name": "Nail Gun", 
+        "price": 2100, 
+        "category": "Power Tools" 
+    },
+    { 
+        "id": 48, 
+        "name": "Heat Gun", 
+        "price": 950, 
+        "category": "Power Tools" 
+    },
+    { 
+        "id": 49, 
+        "name": "Tile Cutter", 
+        "price": 1250, 
+        "category": "Tools" 
+    },
+    { 
+        "id": 50, 
+        "name": "Concrete Mixer", 
+        "price": 5200, 
+        "category": "Equipment" }
+]

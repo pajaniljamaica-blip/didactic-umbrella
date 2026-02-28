@@ -1,18 +1,22 @@
 import React from "react";
 import "./card.css";
 
-export default function ImageCard({ image, title, description, onClick}) {
-   return (
-    <div className="image-card" onClick={onClick}>
-    <div className="image-wrapper">
-    <img src={image} alt={title} />
-    </div>
+const Card = ({ image, title, price, rating }) => {
+  return (
+    <div className="card">
+      <img src={image} alt={title} className="card-img" />
 
-    <div className="card-content">
-    <h3>{title}</h3>
-    <p>{description}</p>
-    <button className="card-btn">View More</button>
+      <div className="card-body">
+        <h3>{title}</h3>
+        <p className="price">₱{price}</p>
+
+        <div className="rating">
+          ⭐ {rating}
+        </div>
+
+        <button className="btn">Add to Cart</button>
+      </div>
     </div>
-    </div>
-    );
-}
+  );
+};
+export default Card;

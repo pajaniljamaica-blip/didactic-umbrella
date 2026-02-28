@@ -2,13 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ECommerce from './ECommerce';
-import Homepage from './app/main/homepage/page';
+import ProductData from './app/main/default/page';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Homepage/>
+    <ProductData/>
   </React.StrictMode>
 );
 
