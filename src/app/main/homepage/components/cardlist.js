@@ -60,7 +60,30 @@ const products = [
   }
 ];
 
-const CardList = () => {
+const styles = {
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    gap: "30px",
+    flexWrap: "wrap",
+    padding: "40px 0"
+  },
+  buttonContainer: {
+    textAlign: "center",
+    marginBottom: "40px"
+  },
+  button: {
+    padding: "12px 25px",
+    fontSize: "16px",
+    backgroundColor: "#ff7f50",
+    color: "#fff",
+    border: "none",
+    borderRadius: "8px",
+    cursor: "pointer"
+  }
+};
+
+export default function CardList() {
   const [showAll, setShowAll] = useState(false);
 
   const visibleProducts = showAll ? products : products.slice(0, 4);
@@ -89,28 +112,4 @@ const CardList = () => {
       </div>
     </>
   );
-};
-
-const styles = {
-  container: {
-    display: "flex",
-    justifyContent: "center",
-    gap: "30px",
-    flexWrap: "wrap",
-    padding: "40px 0"
-  },
-  buttonContainer: {
-    textAlign: "center",
-    marginBottom: "40px"
-  },
-  button: {
-    padding: "12px 25px",
-    fontSize: "16px",
-    backgroundColor: "#ff7f50",
-    color: "#fff",
-    border: "none",
-    borderRadius: "8px",
-    cursor: "pointer"
-  }
-};
-
+}

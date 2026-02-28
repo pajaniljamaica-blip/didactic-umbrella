@@ -2,10 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-<<<<<<< HEAD
-=======
-import ECommerce from './ECommerce';
->>>>>>> e28c9b69f04d4a3670260f0503e510bd93f06c26
 import Homepage from './app/main/homepage/page';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

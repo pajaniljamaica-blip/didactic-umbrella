@@ -19,3 +19,4 @@ const Card = ({ image, title, price, rating }) => {
     </div>
   );
 };
+export default Card;
