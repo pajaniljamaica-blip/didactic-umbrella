@@ -1,115 +1,193 @@
-import React, { useState } from "react";
-import Card from "../../../../components/ui/card";
+import React, { useState } from 'react';
+import Card from '../../../../components/ui/card';
 
-const products = [
+const CATEGORIES = [
+  { id: 'all', label: 'All', icon: '📍' },
+  { id: 'pizza', label: 'Pizza', icon: '🍕' },
+  { id: 'burgers', label: 'Burgers', icon: '🍔' },
+  { id: 'drinks', label: 'Drinks', icon: '🍺' },
+  { id: 'salads', label: 'Salads', icon: '🥗' },
+  { id: 'desserts', label: 'Desserts', icon: '🍰' },
+];
+
+const MENU_ITEMS = [
   {
     id: 1,
-    title: "Margherita Pizza",
-    price: 465,
+    name: 'Margherita Pizza',
+    price: 560,
     rating: 4.5,
-    image: "https://colavitarecipes.com/wp-content/uploads/2017/01/marg-1f-1200x1500.jpg"
+    reviews: 5,
+    category: 'pizza',
+    badge: 'Popular',
+    image: 'https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=400&q=80',
   },
   {
     id: 2,
-    title: "Cheeseburger",
-    price: 75,
-    rating: 4.3,
-    image: "https://www.kitchensanctuary.com/wp-content/uploads/2021/05/Double-Cheeseburger-square-FS-42.jpg"
+    name: 'Cheeseburger',
+    price: 85,
+    rating: 4.5,
+    reviews: 3,
+    category: 'burgers',
+    image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80',
   },
   {
     id: 3,
-    title: "Sushi Platter",
-    price: 950,
-    rating: 4.6,
-    image: "https://images.unsplash.com/photo-1553621042-f6e147245754"
+    name: 'BBQ Burger',
+    price: 95,
+    rating: 4,
+    reviews: 3,
+    category: 'burgers',
+    badge: "Chef's Pick",
+    image: 'https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&q=80',
   },
   {
     id: 4,
-    title: "Chocolate Cake",
-    price: 650,
-    rating: 4.8,
-    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587"
+    name: 'Caesar Salad',
+    price: 350,
+    rating: 4,
+    reviews: 3,
+    category: 'salads',
+    image: 'https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=400&q=80',
   },
   {
     id: 5,
-    title: "Strawberry Ice Cream",
-    price: 1500,
-    rating: 4.7,
-    image: "https://decoranddelicious.org/wp-content/uploads/2025/03/strawberry-ice-cream.webp"
+    name: 'Chicken Tenders',
+    price: 150,
+    rating: 4.5,
+    reviews: 3,
+    category: 'burgers',
+    image: 'https://images.unsplash.com/photo-1562967914-608f82629710?w=400&q=80',
   },
   {
     id: 6,
-    title: "Blueberry Pancakes",
-    price: 195,
-    rating: 4.4,
-    image: "https://i.pinimg.com/736x/7a/70/fe/7a70fe889c975e922e3d16cb76e98b28.jpg"
+    name: 'Veggie Pizza',
+    price: 500,
+    rating: 4.5,
+    reviews: 3,
+    category: 'pizza',
+    image: 'https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400&q=80',
   },
   {
     id: 7,
-    title: "Iced Coffee",
-    price: 85,
-    rating: 4.6,
-    image: "https://img.freepik.com/premium-photo/iced-coffee-isolated-white-background_988198-103.jpg"
+    name: 'Lemonade',
+    price: 75,
+    rating: 5,
+    reviews: 8,
+    category: 'drinks',
+    badge: 'Refreshing',
+    image: 'https://images.unsplash.com/photo-1523677011781-c91d1bbe2f9e?w=400&q=80',
   },
   {
     id: 8,
-    title: "Fresh Lemonade",
-    price: 65,
+    name: 'Garden Salad',
+    price: 250,
+    rating: 4,
+    reviews: 2,
+    category: 'salads',
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80',
+  },
+  {
+    id: 9,
+    name: 'Chocolate Lava Cake',
+    price: 185,
+    rating: 5,
+    reviews: 12,
+    category: 'desserts',
+    badge: 'Fan Favorite',
+    image: 'https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=400&q=80',
+  },
+  {
+    id: 10,
+    name: 'Strawberry Cheesecake',
+    price: 195,
     rating: 4.5,
-    image: "https://carlsbadcravings.com/wp-content/uploads/2023/08/lemonade-recipe-10a-1024x1536.jpg"
-  }
+    reviews: 9,
+    category: 'desserts',
+    image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=400&q=80',
+  },
+  {
+    id: 11,
+    name: 'Vanilla Ice Cream',
+    price: 165,
+    rating: 4.5,
+    reviews: 6,
+    category: 'desserts',
+    badge: 'Classic',
+    image: 'https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=400&q=80',
+  },
+  {
+    id: 12,
+    name: 'Tiramisu',
+    price: 295,
+    rating: 5,
+    reviews: 7,
+    category: 'desserts',
+    badge: 'Chef\'s Pick',
+    image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&q=80',
+  },
 ];
 
-const styles = {
-  container: {
-    display: "flex",
-    justifyContent: "center",
-    gap: "30px",
-    flexWrap: "wrap",
-    padding: "40px 0"
-  },
-  buttonContainer: {
-    textAlign: "center",
-    marginBottom: "40px"
-  },
-  button: {
-    padding: "12px 25px",
-    fontSize: "16px",
-    backgroundColor: "#ff7f50",
-    color: "#fff",
-    border: "none",
-    borderRadius: "8px",
-    cursor: "pointer"
-  }
-};
+const INITIAL_COUNT = 4;
 
-export default function CardList() {
-  const [showAll, setShowAll] = useState(false);
+const CardList = ({ onAddToCart }) => {
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
 
-  const visibleProducts = showAll ? products : products.slice(0, 4);
+  const filtered =
+    activeCategory === 'all'
+      ? MENU_ITEMS
+      : MENU_ITEMS.filter((item) => item.category === activeCategory);
+
+  const visible = filtered.slice(0, visibleCount);
+  const hasMore = visibleCount < filtered.length;
+
+  const handleToggle = () => {
+    if (hasMore) {
+      setVisibleCount(filtered.length);
+    } else {
+      setVisibleCount(INITIAL_COUNT);
+      document.getElementById('menu-section').scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
-    <>
-      <div style={styles.container}>
-        {visibleProducts.map((item) => (
-          <Card
-            key={item.id}
-            image={item.image}
-            title={item.title}
-            price={item.price}
-            rating={item.rating}
-          />
+    <section className="card-list-section">
+      <div className="card-list-header">
+        <h2>Popular Local Dishes</h2>
+        <p>Freshly prepared with local ingredients</p>
+      </div>
+
+      <div className="filter-tabs">
+        {CATEGORIES.map((cat) => (
+          <button
+            key={cat.id}
+            className={`filter-tab${activeCategory === cat.id ? ' active' : ''}`}
+            onClick={() => {
+              setActiveCategory(cat.id);
+              setVisibleCount(INITIAL_COUNT);
+            }}
+          >
+            <span>{cat.icon}</span>
+            {cat.label}
+          </button>
         ))}
       </div>
 
-      <div style={styles.buttonContainer}>
-        <button
-          style={styles.button}
-          onClick={() => setShowAll(!showAll)}
-        >
-          {showAll ? "View Less" : "View More"}
-        </button>
+      <div className="card-grid">
+        {visible.map((item) => (
+          <Card key={item.id} item={item} onAddToCart={onAddToCart} />
+        ))}
       </div>
-    </>
+
+      {filtered.length > INITIAL_COUNT && (
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '36px' }}>
+          <button className="view-more-btn" onClick={handleToggle}>
+            {hasMore ? 'View More' : 'View Less'}
+          </button>
+        </div>
+      )}
+    </section>
   );
-}
+};
+
+export default CardList;
