@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Homepage from './app/main/homepage/page';
-//import ProductForm from './components/form-data';
 //import ProductList from './components/form-data/view';
 
 
