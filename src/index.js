@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Homepage from './app/main/homepage/page';
+import swDev from './swDev';
 //import ProductList from './components/form-data/view';
 
 
@@ -17,3 +18,4 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+swDev();
