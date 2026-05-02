@@ -7,7 +7,7 @@ const CORE_ASSETS = [
     "/favicon.ico",
     "/logo192.png",
     "/logo512.png",
-    
+
 ];
 
 //Install Service Worker
@@ -31,7 +31,7 @@ self.addEventListener("activate", (event) => {
         )
     )
 );
-self.client.claim();
+self.clients.claim();
 });
 
 // Cache First Strategy
